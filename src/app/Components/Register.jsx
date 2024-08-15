@@ -10,17 +10,15 @@ function Register() {
     if (!email.endsWith('@kiit.ac.in')) {
       alert('Please enter your KIIT mail ID');
     } else {
-      setError('');
-      // Proceed with form submission, for example using a POST request.
-      console.log('Form submitted with email:', email);
+      console.log(alert('Your form has been submitted successfully.x'));
     }
   };
 
   return (
     <div className="App box-content h-auto w-auto bg-gradient-to-r from-violet-500 to-fuchsia-500">
       <div className="head flex flex-col justify-center items-center">
-        <img src="aws.svg" className="aws_logo bg-slate-700 my-4" alt="AWS Logo" />
-        <h1 className="text-center text-[55px] font-bold text-white">
+        <img src="aws.svg" className="aws_logo  my-4" alt="AWS Logo" />
+        <h1 className="text-center text-[400%] font-bold text-white">
           AWS KIIT Chapter Registration Page
         </h1>
       </div>
@@ -28,22 +26,22 @@ function Register() {
       <br />
       <form className="form_main box-content h-auto w-auto mx-[20%]" onSubmit={validate}>
         <div className="reg">
-          <p className="text-[25px]">Required fields are marked by <b>*</b></p>
+          <p className="text-[25px] text-white">Required fields are marked by <b>*</b></p>
 
           <label>
-            <p className="text-[20px]">Enter your Roll no. *</p>
+            <p className="text-[130%]">Enter your Roll no. *</p>
             <input type="text" required />
           </label>
           <br />
           
           <label>
-            <p className="text-[20px]">Enter your name *</p>
+            <p className="text-[130%]">Enter your name *</p>
             <input type="text" required />
           </label>
           <br />
           
           <label>
-            <p className="text-[20px]">Enter your mail id <b>(KIIT ID)</b> *</p>
+            <p className="text-[130%]">Enter your mail id <b>(KIIT ID)</b> *</p>
             <input
               type="email"
               value={email}
@@ -52,9 +50,8 @@ function Register() {
             />
           </label>
           <br />
-          {error && <p style={{ color: 'red' }}>{error}</p>}
 
-          <p className="text-[20px]">Select your academic year *</p>
+          <p className="text-[130%]">Select your academic year *</p>
           <label>
             <input type="radio" name="academicYear" value="1" required /> 1
           </label>
@@ -66,7 +63,7 @@ function Register() {
           </label>
           <br />
 
-          <p className="text-[25px]">Gender *</p>
+          <p className="text-[130%]">Gender *</p>
           <label>
             <input type="radio" name="gender" value="Male" required /> Male
           </label>
@@ -82,31 +79,38 @@ function Register() {
           <br />
 
           <label>
-            <p className="text-[25px]">Enter your address *</p>
-            <textarea className="address" required></textarea>
+            <p className="text-[130%]">Enter your address *</p>
+            <textarea className="address w-60" required></textarea>
           </label>
           <br />
 
           <label>
-            <p className="text-[25px]">Kindly upload your CV/Resume <b>(in PDF format)</b> *</p>
+            <p className="text-[130%]">Kindly upload your CV/Resume <b>(in PDF format)</b> *</p>
             <input type="file" accept="application/pdf" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[25px]">Provide your LinkedIn URL *</p>
+            <p className="text-[130%]">Provide your LinkedIn URL *</p>
             <input type="url" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[25px]">Provide your GitHub Link *</p>
+            <p className="text-[130%]">Provide your GitHub Link *</p>
             <input type="url" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[25px]">What makes you feel a best fit for AWS KIIT Chapter? *</p>
+            <p className="text-[130%]">What makes you feel a best fit for AWS KIIT Chapter? *</p>
+            <textarea required></textarea>
+          </label>
+          <br />
+
+          <label>
+            <p className="text-[130%]">How will your skills contribute for AWS KIIT Chapter? *</p>
+            <p>(Expecting some good answer from your side 😊)</p>
             <textarea required></textarea>
           </label>
           <br />
