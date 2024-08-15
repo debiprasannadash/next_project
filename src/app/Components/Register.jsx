@@ -10,7 +10,7 @@ function Register() {
     if (!email.endsWith('@kiit.ac.in')) {
       alert('Please enter your KIIT mail ID');
     } else {
-      console.log(alert('Your form has been submitted successfully.x'));
+      console.log(alert('Your form has been submitted successfully.'));
     }
   };
 
@@ -18,7 +18,7 @@ function Register() {
     <div className="App box-content h-auto w-auto bg-gradient-to-r from-violet-500 to-fuchsia-500">
       <div className="head flex flex-col justify-center items-center">
         <img src="aws.svg" className="aws_logo  my-4" alt="AWS Logo" />
-        <h1 className="text-center text-[400%] font-bold text-white">
+        <h1 className="text-center text-[300%] font-bold text-white">
           AWS KIIT Chapter Registration Page
         </h1>
       </div>
