@@ -6,7 +6,7 @@ function Register() {
   const [error, setError] = useState('');
 
   const validate = (e) => {
-    e.preventDefault();
+
     if (!email.endsWith('@kiit.ac.in')) {
       alert('Please enter your KIIT mail ID');
     } else {
