@@ -42,12 +42,7 @@ function Register() {
           
           <label>
             <p className="text-[130%]">Enter your mail id <b>(KIIT ID)</b> *</p>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            <input type="email"  value={email} onChange={(e) => setEmail(e.target.value)} required />
           </label>
           <br />
 
