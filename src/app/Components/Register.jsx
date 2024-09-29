@@ -24,7 +24,7 @@ function Register() {
       </div>
       
       <br />
-      <form className="form_main box-content h-auto w-auto mx-[20%]" onSubmit={validate}>
+      <form className="form_main mx-[40%] box-content h-auto w-auto mx-[20%]" onSubmit={validate}>
         <div className="reg">
           <p className="text-[25px] text-white">Required fields are marked by <b>*</b></p>
 
@@ -55,6 +55,9 @@ function Register() {
           </label>
           <label>
             <input type="radio" name="academicYear" value="3" required /> 3
+          </label>
+          <label>
+            <input type="radio" name="academicYear" value="4" required /> 4
           </label>
           <br />
 
