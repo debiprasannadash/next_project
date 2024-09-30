@@ -3,50 +3,49 @@ import React, { useState } from "react";
 
 function Register() {
   const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
 
   const validate = (e) => {
-
+    e.preventDefault(); // Prevent form submission for testing purposes
     if (!email.endsWith('@kiit.ac.in')) {
       alert('Please enter your KIIT mail ID');
     } else {
-      console.log(alert('Your form has been submitted successfully.'));
+      console.log('Your form has been submitted successfully.');
     }
   };
 
   return (
     <div className="App box-content h-auto w-auto bg-gradient-to-r from-violet-500 to-fuchsia-500">
       <div className="head flex flex-col justify-center items-center">
-        <img src="aws.svg" className="aws_logo  my-4" alt="AWS Logo" />
-        <h1 className="text-center text-[300%] font-bold text-white">
+        <img src="aws.svg" className="aws_logo my-4" alt="AWS Logo" />
+        <h1 className="text-center text-3xl sm:text-5xl font-bold text-white">
           AWS KIIT Chapter Registration Page
         </h1>
       </div>
-      
+
       <br />
-      <form className="form_main mx-[40%] box-content h-auto w-auto mx-[20%]" onSubmit={validate}>
+      <form className="form_main mx-auto max-w-2xl px-4 sm:px-6 lg:px-8" onSubmit={validate}>
         <div className="reg">
-          <p className="text-[25px] text-white">Required fields are marked by <b>*</b></p>
+          <p className="text-lg sm:text-xl text-white">Required fields are marked by <b>*</b></p>
 
           <label>
-            <p className="text-[130%]">Enter your Roll no. *</p>
-            <input type="text" required />
-          </label>
-          <br />
-          
-          <label>
-            <p className="text-[130%]">Enter your name *</p>
-            <input type="text" required />
-          </label>
-          <br />
-          
-          <label>
-            <p className="text-[130%]">Enter your mail id <b>(KIIT ID)</b> *</p>
-            <input type="email"  value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <p className="text-lg">Enter your Roll no. *</p>
+            <input type="text" className="w-full p-2" required />
           </label>
           <br />
 
-          <p className="text-[130%]">Select your academic year *</p>
+          <label>
+            <p className="text-lg">Enter your name *</p>
+            <input type="text" className="w-full p-2" required />
+          </label>
+          <br />
+
+          <label>
+            <p className="text-lg">Enter your mail id <b>(KIIT ID)</b> *</p>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full p-2" required />
+          </label>
+          <br />
+
+          <p className="text-lg">Select your academic year *</p>
           <label>
             <input type="radio" name="academicYear" value="1" required /> 1
           </label>
@@ -58,7 +57,7 @@ function Register() {
           </label>
           <br />
 
-          <p className="text-[130%]">Gender *</p>
+          <p className="text-lg">Gender *</p>
           <label>
             <input type="radio" name="gender" value="Male" required /> Male
           </label>
@@ -68,49 +67,49 @@ function Register() {
           <br />
 
           <label>
-            <p className="text-[20px]">Date of Birth *</p>
-            <input type="date" required />
+            <p className="text-lg">Date of Birth *</p>
+            <input type="date" className="w-full p-2" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[130%]">Enter your address *</p>
-            <textarea className="address w-60" required></textarea>
+            <p className="text-lg">Enter your address *</p>
+            <textarea className="address w-full p-2" required></textarea>
           </label>
           <br />
 
           <label>
-            <p className="text-[130%]">Kindly upload your CV/Resume <b>(in PDF format)</b> *</p>
-            <input type="file" accept="application/pdf" required />
+            <p className="text-lg">Kindly upload your CV/Resume <b>(in PDF format)</b> *</p>
+            <input type="file" accept="application/pdf" className="w-full p-2" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[130%]">Provide your LinkedIn URL *</p>
-            <input type="url" required />
+            <p className="text-lg">Provide your LinkedIn URL *</p>
+            <input type="url" className="w-full p-2" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[130%]">Provide your GitHub Link *</p>
-            <input type="url" required />
+            <p className="text-lg">Provide your GitHub Link *</p>
+            <input type="url" className="w-full p-2" required />
           </label>
           <br />
 
           <label>
-            <p className="text-[130%]">What makes you feel a best fit for AWS KIIT Chapter? *</p>
-            <textarea required></textarea>
+            <p className="text-lg">What makes you feel a best fit for AWS KIIT Chapter? *</p>
+            <textarea className="w-full p-2" required></textarea>
           </label>
           <br />
 
           <label>
-            <p className="text-[130%]">How will your skills contribute for AWS KIIT Chapter? *</p>
-            <p>(Expecting some good answer from your side 😊)</p>
-            <textarea required></textarea>
+            <p className="text-lg">How will your skills contribute to AWS KIIT Chapter? *</p>
+            <p>(Expecting some good answers from your side 😊)</p>
+            <textarea className="w-full p-2" required></textarea>
           </label>
           <br />
 
-          <button type="submit" className="bg-pink-700 text-white font-bold px-[2%] py-[1%] rounded hover:bg-green-600">
+          <button type="submit" className="bg-pink-700 text-white font-bold px-4 py-2 rounded hover:bg-green-600 w-full sm:w-auto">
             Register
           </button>
           <br />
