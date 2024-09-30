@@ -56,9 +56,6 @@ function Register() {
           <label>
             <input type="radio" name="academicYear" value="3" required /> 3
           </label>
-          <label>
-            <input type="radio" name="academicYear" value="4" required /> 4
-          </label>
           <br />
 
           <p className="text-[130%]">Gender *</p>
