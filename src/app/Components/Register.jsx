@@ -109,7 +109,7 @@ function Register() {
           </label>
           <br />
 
-          <button type="submit" className="bg-pink-700 text-white font-bold px-4 py-2 rounded hover:bg-green-600 w-full sm:w-auto">
+          <button type="submit" className="bg-pink-700 text-white font-bold px-3 py-2 rounded hover:bg-green-600 w-full sm:w-auto">
             Register
           </button>
           <br />
