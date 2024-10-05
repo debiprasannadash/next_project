@@ -4,14 +4,48 @@ import React, { useState } from "react";
 function Register() {
   const [email, setEmail] = useState('');
 
-  const validate = (e) => {
-    e.preventDefault(); // Prevent form submission for testing purposes
+  const validate = async (e) => {
+    e.preventDefault();
+  
     if (!email.endsWith('@kiit.ac.in')) {
       alert('Please enter your KIIT mail ID');
-    } else {
-      console.log('Your form has been submitted successfully.');
+      return;
+    }
+  
+    const formData = new FormData(e.target);
+  
+    const data = {
+      rollNo: formData.get('rollNo'),
+      name: formData.get('name'),
+      email: formData.get('email'),
+      academicYear: formData.get('academicYear'),
+      gender: formData.get('gender'),
+      dateOfBirth: formData.get('dateOfBirth'),
+      address: formData.get('address'),
+      resumeUrl: formData.get('resumeUrl'), // Assuming a URL is returned after file upload
+      linkedinUrl: formData.get('linkedinUrl'),
+      githubUrl: formData.get('githubUrl'),
+      fitReason: formData.get('fitReason'),
+      contribution: formData.get('contribution'),
+    };
+  
+    try {
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+  
+      if (res.ok) {
+        alert('Registration successful!');
+      } else {
+        alert('Registration failed. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred: ' + error.message);
     }
   };
+  
 
   return (
     <div className="App box-content h-auto w-auto bg-gradient-to-r from-violet-500 to-fuchsia-500">

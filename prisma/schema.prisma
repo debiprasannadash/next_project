@@ -28,4 +28,3 @@ model Registration {
   bestFit   String
   skillsContribution String
 }
-
